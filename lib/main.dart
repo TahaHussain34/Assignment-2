@@ -11,30 +11,45 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.blueGrey,
           title: Center(child: Text("Taha Hussain Login Page")),
         ),
-        body: Center(
-          child: Column(
-            children: [
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                width: 200,
-                child: TextField(),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                width: 200,
-                child: TextField(),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              ElevatedButton(onPressed: () {}, child: Text("Login"))
-            ],
+        body: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  width: 200,
+                  child: TextField(
+                    decoration:
+                        InputDecoration(hintText: 'Enter your Email address'),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  width: 200,
+                  child: TextField(
+                    decoration:
+                        InputDecoration(hintText: 'Enter your Password'),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.blueGrey,
+                      onPrimary: Colors.white,
+                    ),
+                    onPressed: () {},
+                    child: Text("Login"))
+              ],
+            ),
           ),
         ),
       ),
